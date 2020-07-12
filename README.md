@@ -8,41 +8,32 @@ Python 3.6
 
 Pytorch 0.4.1
 
-Jiayan0.0.21
+[Jiayan0.0.21](https://github.com/jiaeyan/Jiayan)
 
 ## Input format:
-CoNLL format, with each character and its label split by a whitespace in a line. The "BMES" tag scheme is prefered.
+With each character and its label split by a whitespace in a line. The "BIOES" tag scheme is prefered.
 
-别 O 
+发 B-SYM 
 
-错 O
+热 E-SYM
 
-过 O
+汗 B-SYM
 
-邻 O
+多 E-SYM
 
-近 O
+者 O
 
-大 B-LOC
 
-鹏 M-LOC
+## Trained model
+The best performance model can be downloaded from the link below:
+[TCM_DSET](https://pan.baidu.com/s/1gNHknUq4XSjkkxLUanN0XQ) Extracting code:l3y3
+[best model](https://pan.baidu.com/s/1OXJWpozUz7Y-nEQE3w7tfg) Extracting code:jl93
 
-湾 E-LOC
-
-的 O
-
-湿 O
-
-地 O
-
-## Pretrain embedding:
-The pretrained embeddings(word embedding, char embedding and bichar embedding) are the same with [Lattice LSTM](https://www.aclweb.org/anthology/P18-1144)
 
 ## Run the code:
 1. Download the character embeddings and word embeddings from [Lattice LSTM](https://github.com/jiesutd/LatticeLSTM) and put them in the `data` folder.
-2. Download the four datasets in `data/MSRANER`, `data/OntoNotesNER`, `data/ResumeNER` and `data/WeiboNER`, respectively.
-3. To train on the four datasets:
-
+2. Download the dataset from .
+3. To train on the dataset:
 
 
 4. To train/test your own data: modify the command with your file path and run.
