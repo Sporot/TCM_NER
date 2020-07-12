@@ -398,6 +398,8 @@ def train(data, save_model_dir, seg=True):
 def load_model_decode(model_dir, data, name, gpu, seg=True):
     data.HP_gpu = gpu
     logging.info( "Load Model from file: ", model_dir)
+    data.use_dictionary = True
+    data.simi_dic_dim = 60
     model = SeqModel(data)
 
     model.load_state_dict(torch.load(model_dir))
@@ -517,7 +519,7 @@ if __name__ == '__main__':
     #gaz_file = "data/ctb.50d.vec"
 
     sys.stdout.flush()
-    status =='test'
+    status ='test'
     if status == 'train':
         if os.path.exists(save_data_name):
             #print('Loading processed data')
@@ -587,7 +589,7 @@ if __name__ == '__main__':
         data.model_type = args.model_type
         data.HP_hidden_dim = args.hidden_dim
         data.HP_use_count = args.use_count
-        data.generate_instance_with_gaz(test_file,'test')
+        #data.generate_instance_with_gaz(test_file,'test')
         load_model_decode(save_model_dir, data, 'test', gpu, seg)
 
     else:
