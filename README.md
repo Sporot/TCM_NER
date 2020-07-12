@@ -32,11 +32,4 @@ The best performance model can be downloaded from the link below:
 [best model](https://pan.baidu.com/s/1OXJWpozUz7Y-nEQE3w7tfg) Extracting code:jl93
 
 
-## Run the code:
-1. Download the character embeddings and word embeddings from [Lattice LSTM](https://github.com/jiesutd/LatticeLSTM) and put them in the `data` folder.
-2. Download the dataset from .
-3. To train on the dataset:
-
-
-4. To train/test your own data: modify the command with your file path and run.
 
